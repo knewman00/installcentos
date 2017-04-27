@@ -15,7 +15,12 @@ openshift_hosted_metrics_deploy=false
 enable_excluders=false
 
 [masters]
-console.openbinarylabs.com openshift_schedulable=true
+console.openbinarylabs.com openshift_schedulable=false
 
 [nodes]
-console.openbinarylabs.com openshift_node_labels="{'region': 'infra', 'zone': 'default'}" openshift_schedulable=true
+console.openbinarylabs.com openshift_node_labels="{'region': 'infra', 'zone': 'default'}" 
+origin-node-01.openbinarylabs.com  openshift_node_labels="{'region': 'primary', 'zone': 'east'}"
+origin-node-02.openbinarylabs.com  openshift_node_labels="{'region': 'primary', 'zone': 'west'}"
+
+
+
